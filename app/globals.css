@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.auth-dark-theme {
+  /* Фоны */
+  --bg-main:      #121212;   /* Глубокий черный (общий фон страницы) */
+  --bg-panel:     #1E1E1E;   /* Темно-серый (правая панель, инпуты, табы) */
+  --bg-alt:       #2A2A2A;   /* Светло-черный (декор левой панели) */
+
+  /* Границы и разделители */
+  --border-mid:   #333333;   /* Тонкие границы инпутов */
+  --border-focus: #E8A87C;   /* Оранжевый фокус (соответствует бренду) */
+
+  /* Акценты (TimeBuddy Orange) */
+  --orange:       #E8A87C;   /* Основной цвет — кнопки, точки, детали */
+  --orange-deep:  #D4906A;   /* Состояние при наведении (hover) */
+  --orange-soft:  rgba(232, 168, 124, 0.15); /* Мягкое свечение */
+
+  /* Типографика */
+  --text-primary: #FFFFFF;   /* Заголовки (чистый белый) */
+  --text-body:    #E0E0E0;   /* Текст пузыря, основной текст (светло-серый) */
+  --text-muted:   #AAAAAA;   /* Подписи, неактивные табы */
+  --text-faint:   #666666;   /* Плейсхолдеры, условия */
+
+  /* Кнопки */
+  --btn-text:     #121212;   /* Темный текст на оранжевой кнопке */
+}
+
+body {
+  @apply bg-cream text-text-primary font-sans antialiased;
+}
+
+* {
+  @apply border-border;
+}
+
+.section-wrap {
+  @apply py-16 lg:py-24;
+}
+
+.content-wrap {
+  @apply mx-auto w-full max-w-content px-5 md:px-6;
+}
+
+.focuspet-input {
+  @apply h-12 w-full rounded-[10px] border-[1.5px] border-border bg-surface px-4 text-[15px] text-text-primary placeholder:text-text-muted;
+}
+
+.focuspet-input:focus {
+  border-color: #B8A9F0;
+  outline: none;
+}
